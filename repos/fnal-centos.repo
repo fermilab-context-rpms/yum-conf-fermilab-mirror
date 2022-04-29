@@ -1,3 +1,6 @@
+### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-centos-stream ###
+###       YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE       ###
+
 [fnal-mirror-baseos]
 name=CentOS Stream $releasever - BaseOS
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/BaseOS/$basearch/os/
@@ -33,3 +36,40 @@ gpgcheck=1
 repo_gpgcheck=0
 metadata_expire=6h
 enabled=1
+
+############################
+[fnal-mirror-highavailability]
+name=CentOS Stream $releasever - HighAvailability
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/HighAvailability/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-nfv]
+name=CentOS Stream $releasever - NFV
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/NFV/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-rt]
+name=CentOS Stream $releasever - RT
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/RT/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-resilientstorage]
+name=CentOS Stream $releasever - ResilientStorage
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/ResilientStorage/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0

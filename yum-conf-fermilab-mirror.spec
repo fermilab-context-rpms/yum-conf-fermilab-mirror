@@ -1,6 +1,6 @@
 Name:		yum-conf-fermilab-mirror
 Version:	1.0
-Release:	1%{?dist}
+Release:	2.1%{?dist}
 Summary:	yum/dnf repo files that use the Fermilab mirrors
 
 Group:		Fermilab
@@ -46,7 +46,7 @@ This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
 %{__install} -D fnal-centos.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-centos.repo
 
 # for epel
-%{__install} -D fnal-centos.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel.repo
+%{__install} -D fnal-epel.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel.repo
 
 
 #####################################################################
@@ -56,13 +56,19 @@ This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
 
 %files centos-stream
 %defattr(0644,root,root,0755)
-%{_sysconfdir}/yum.repos.d/fnal-centos.repo
+%config %{_sysconfdir}/yum.repos.d/fnal-centos.repo
 
 %files epel
 %defattr(0644,root,root,0755)
-%{_sysconfdir}/yum.repos.d/fnal-epel.repo
+%config %{_sysconfdir}/yum.repos.d/fnal-epel.repo
 
 #####################################################################
 %changelog
+* Sat Apr 30 2022 Pat Riehecky <riehecky@fnal.gov> 1.0-2.1
+- Fix install typo
+
+* Fri Apr 29 2022 Pat Riehecky <riehecky@fnal.gov> 1.0-2
+- Add addon product repos
+
 * Fri Apr 29 2022 Pat Riehecky <riehecky@fnal.gov> 1.0-1
 - Initial build

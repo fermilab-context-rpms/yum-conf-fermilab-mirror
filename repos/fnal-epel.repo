@@ -1,3 +1,6 @@
+### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-epel ###
+###   YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE  ###
+
 [fnal-mirror-epel]
 name=Extra Packages for Enterprise Linux $releasever - $basearch
 baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/$releasever/Everything/$basearch/
