@@ -1,0 +1,35 @@
+[fnal-mirror-baseos]
+name=CentOS Stream $releasever - BaseOS
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/BaseOS/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-appstream]
+name=CentOS Stream $releasever - AppStream
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/AppStream/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-crb]
+name=CentOS Stream $releasever - CRB
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/CRB/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-extras-common]
+name=CentOS Stream $releasever - Extras packages
+baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/SIGs/$stream/extras/$basearch/extras-common/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Extras-SHA512
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
