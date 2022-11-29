@@ -1,0 +1,75 @@
+### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-almalinux ###
+###     YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE     ###
+
+[fnal-mirror-almalinux-baseos]
+name=AlmaLinux $releasever - BaseOS
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/BaseOS/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-almalinux-appstream]
+name=AlmaLinux $releasever - AppStream
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/AppStream/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-almalinux-crb]
+name=AlmaLinux $releasever - CRB
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/CRB/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+[fnal-mirror-almalinux-extras-common]
+name=AlmaLinux $releasever - Extras packages
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/SIGs/$releasever/extras/$basearch/extras-common/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=1
+
+############################
+[fnal-mirror-almalinux-highavailability]
+name=AlmaLinux $releasever - HighAvailability
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/HighAvailability/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-almalinux-nfv]
+name=AlmaLinux $releasever - NFV
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/NFV/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-almalinux-rt]
+name=AlmaLinux $releasever - RT
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/RT/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0
+
+[fnal-mirror-almalinux-resilientstorage]
+name=AlmaLinux $releasever - ResilientStorage
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/ResilientStorage/$basearch/os/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+repo_gpgcheck=0
+metadata_expire=6h
+enabled=0

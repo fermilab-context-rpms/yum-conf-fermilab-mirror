@@ -1,6 +1,6 @@
 Name:		yum-conf-fermilab-mirror
-Version:	1.0
-Release:	2.1%{?dist}
+Version:	1.1
+Release:	1%{?dist}
 Summary:	yum/dnf repo files that use the Fermilab mirrors
 
 Group:		Fermilab
@@ -11,11 +11,21 @@ BuildArch:	noarch
 Source0:	yum-conf-fermilab-mirror-sources.tar.gz
 
 # Top level package should require software specific packages
+Requires:	(%{name}-almalinux == %{version}-%{release} if almalinux-repos)
 Requires:	(%{name}-centos-stream == %{version}-%{release} if centos-stream-repos)
 Requires:	(%{name}-epel == %{version}-%{release} if epel-release)
+Requires:	(%{name}-epel-next == %{version}-%{release} if epel-next-release)
 
 %description
 This package deploys yum/dnf repo files that use the Fermilab mirrors.
+
+%package almalinux
+Summary:        yum/dnf repo files for AlmaLinux
+Requires:       dnf dnf-utils
+Requires:       almalinux-repos
+
+%description almalinux
+This package deploys yum/dnf repo files for AlmaLinux that use the Fermilab mirrors.
 
 %package centos-stream
 Summary:	yum/dnf repo files for CentOS Stream
@@ -28,10 +38,18 @@ This package deploys yum/dnf repo files for CentOS Stream that use the Fermilab 
 %package epel
 Summary:	yum/dnf repo files for EPEL
 Requires:	dnf dnf-utils
-Requires:	system-release(releasever) redhat-release
+Requires:	system-release(releasever) redhat-release epel-release
 
 %description epel
 This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
+
+%package epel-next
+Summary:        yum/dnf repo files for EPEL-Next
+Requires:       dnf dnf-utils
+Requires:       system-release(releasever) redhat-release epel-next-release
+
+%description epel-next
+This package deploys yum/dnf repo files for EPEL-Next that use the Fermilab mirrors.
 
 
 %prep
@@ -42,11 +60,17 @@ This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
 
 
 %install
-# for stream
-%{__install} -D fnal-centos.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-centos.repo
+# for almalinux
+%{__install} -D fnal-almalinux.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-almalinux.repo
+
+# for centos-stream
+%{__install} -D fnal-centos-stream.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-centos-stream.repo
 
 # for epel
 %{__install} -D fnal-epel.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel.repo
+
+# for epel-next
+%{__install} -D fnal-epel-next.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel-next.repo
 
 
 #####################################################################
@@ -54,16 +78,31 @@ This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
 %files
 %defattr(0644,root,root,0755)
 
+%files almalinux
+%defattr(0644,root,root,0755)
+%config %{_sysconfdir}/yum.repos.d/fnal-almalinux.repo
+
 %files centos-stream
 %defattr(0644,root,root,0755)
-%config %{_sysconfdir}/yum.repos.d/fnal-centos.repo
+%config %{_sysconfdir}/yum.repos.d/fnal-centos-stream.repo
 
 %files epel
 %defattr(0644,root,root,0755)
 %config %{_sysconfdir}/yum.repos.d/fnal-epel.repo
 
+%files epel-next
+%defattr(0644,root,root,0755)
+%config %{_sysconfdir}/yum.repos.d/fnal-epel-next.repo
+
+
 #####################################################################
 %changelog
+* Tue Nov 29 2022 Pat Riehecky <riehecky@fnal.gov> 1.1-1
+- More consistent names for repos and repo files
+- Add almalinux package
+- split out epel-next repo
+- fix deps for epel so we get the gpg key
+
 * Sat Apr 30 2022 Pat Riehecky <riehecky@fnal.gov> 1.0-2.1
 - Fix install typo
 

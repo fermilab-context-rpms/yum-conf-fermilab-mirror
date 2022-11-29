@@ -1,7 +1,7 @@
 ### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-centos-stream ###
 ###       YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE       ###
 
-[fnal-mirror-baseos]
+[fnal-mirror-centos-stream-baseos]
 name=CentOS Stream $releasever - BaseOS
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/BaseOS/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -10,7 +10,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=1
 
-[fnal-mirror-appstream]
+[fnal-mirror-centos-stream-appstream]
 name=CentOS Stream $releasever - AppStream
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/AppStream/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -19,7 +19,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=1
 
-[fnal-mirror-crb]
+[fnal-mirror-centos-stream-crb]
 name=CentOS Stream $releasever - CRB
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/CRB/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -28,7 +28,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=1
 
-[fnal-mirror-extras-common]
+[fnal-mirror-centos-stream-extras-common]
 name=CentOS Stream $releasever - Extras packages
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/SIGs/$stream/extras/$basearch/extras-common/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Extras-SHA512
@@ -38,7 +38,7 @@ metadata_expire=6h
 enabled=1
 
 ############################
-[fnal-mirror-highavailability]
+[fnal-mirror-centos-stream-highavailability]
 name=CentOS Stream $releasever - HighAvailability
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/HighAvailability/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -47,7 +47,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=0
 
-[fnal-mirror-nfv]
+[fnal-mirror-centos-stream-nfv]
 name=CentOS Stream $releasever - NFV
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/NFV/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -56,7 +56,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=0
 
-[fnal-mirror-rt]
+[fnal-mirror-centos-stream-rt]
 name=CentOS Stream $releasever - RT
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/RT/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
@@ -65,7 +65,7 @@ repo_gpgcheck=0
 metadata_expire=6h
 enabled=0
 
-[fnal-mirror-resilientstorage]
+[fnal-mirror-centos-stream-resilientstorage]
 name=CentOS Stream $releasever - ResilientStorage
 baseurl=https://linux-mirrors.fnal.gov/linux/centos-stream/$stream/ResilientStorage/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
