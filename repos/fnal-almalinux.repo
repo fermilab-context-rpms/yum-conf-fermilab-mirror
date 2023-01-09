@@ -30,7 +30,7 @@ enabled=1
 
 [fnal-mirror-almalinux-extras-common]
 name=AlmaLinux $releasever - Extras packages
-baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/SIGs/$releasever/extras/$basearch/extras-common/
+baseurl=https://linux-mirrors.fnal.gov/linux/almalinux/$releasever/extras/$basearch/os/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 gpgcheck=1
 repo_gpgcheck=0
