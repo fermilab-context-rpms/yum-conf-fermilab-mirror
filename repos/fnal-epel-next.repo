@@ -1,16 +1,16 @@
-### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-epel ###
-###   YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE  ###
+### THIS FILE IS MANAGED BY yum-conf-fermilab-mirror-epel-next ###
+###     YOUR CHANGES HERE WILL BE REVERTED BY THIS PACAKGE     ###
 
-[fnal-mirror-epel]
-name=Extra Packages for Enterprise Linux $releasever - $basearch
-baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/$releasever/Everything/$basearch/
+[fnal-mirror-epel-next]
+name=Extra Packages for Enterprise Linux $releasever - Next - $basearch
+baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/next/$releasever/Everything/$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever
 
-[fnal-mirror-epel-testing]
-name=Extra Packages for Enterprise Linux $releasever - Testing - $basearch
-baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/testing/$releasever/Everything/$basearch/
+[epel-next-testing]
+name=Extra Packages for Enterprise Linux $releasever - Next - Testing - $basearch
+baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/testing/next/$releasever/Everything/$basearch/
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever

@@ -1,6 +1,6 @@
 Name:		yum-conf-fermilab-mirror
-Version:	1.1
-Release:	2%{?dist}
+Version:	1.2
+Release:	1%{?dist}
 Summary:	yum/dnf repo files that use the Fermilab mirrors
 
 Group:		Fermilab
@@ -97,6 +97,9 @@ This package deploys yum/dnf repo files for EPEL-Next that use the Fermilab mirr
 
 #####################################################################
 %changelog
+* Thu Jan 12 2022 Pat Riehecky <riehecky@fnal.gov> 1.2-1
+- Fix logic swap for epel/epel-next
+
 * Mon Jan 9 2022 Pat Riehecky <riehecky@fnal.gov> 1.1-2
 - Fix typo in alma linux extras repo
 
