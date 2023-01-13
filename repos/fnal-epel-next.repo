@@ -8,7 +8,7 @@ enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-$releasever
 
-[epel-next-testing]
+[fnal-mirror-epel-next-testing]
 name=Extra Packages for Enterprise Linux $releasever - Next - Testing - $basearch
 baseurl=https://linux-mirrors.fnal.gov/linux/fedora/epel/testing/next/$releasever/Everything/$basearch/
 enabled=0
