@@ -14,7 +14,9 @@ Source0:	yum-conf-fermilab-mirror-sources.tar.gz
 Requires:	(%{name}-almalinux == %{version}-%{release} if almalinux-repos)
 Requires:	(%{name}-centos-stream == %{version}-%{release} if centos-stream-repos)
 Requires:	(%{name}-epel == %{version}-%{release} if epel-release)
+%if 0%{?rhel} < 10
 Requires:	(%{name}-epel-next == %{version}-%{release} if epel-next-release)
+%endif
 
 %description
 This package deploys yum/dnf repo files that use the Fermilab mirrors.
@@ -43,6 +45,7 @@ Requires:	system-release(releasever) redhat-release epel-release
 %description epel
 This package deploys yum/dnf repo files for EPEL that use the Fermilab mirrors.
 
+%if 0%{?rhel} < 10
 %package epel-next
 Summary:        yum/dnf repo files for EPEL-Next
 Requires:       dnf dnf-utils
@@ -50,7 +53,7 @@ Requires:       system-release(releasever) redhat-release epel-next-release
 
 %description epel-next
 This package deploys yum/dnf repo files for EPEL-Next that use the Fermilab mirrors.
-
+%endif
 
 %prep
 %setup -n repos
@@ -70,7 +73,9 @@ This package deploys yum/dnf repo files for EPEL-Next that use the Fermilab mirr
 %{__install} -D fnal-epel.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel.repo
 
 # for epel-next
+%if 0%{?rhel} < 10
 %{__install} -D fnal-epel-next.repo %{buildroot}%{_sysconfdir}/yum.repos.d/fnal-epel-next.repo
+%endif
 
 
 #####################################################################
@@ -90,9 +95,11 @@ This package deploys yum/dnf repo files for EPEL-Next that use the Fermilab mirr
 %defattr(0644,root,root,0755)
 %config %{_sysconfdir}/yum.repos.d/fnal-epel.repo
 
+%if 0%{?rhel} < 10
 %files epel-next
 %defattr(0644,root,root,0755)
 %config %{_sysconfdir}/yum.repos.d/fnal-epel-next.repo
+%endif
 
 
 #####################################################################
